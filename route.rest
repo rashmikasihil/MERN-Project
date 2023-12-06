@@ -1,0 +1,81 @@
+// Register
+GET http://localhost:5000/api/users/register
+
+
+###
+GET http://localhost:5000/api/users/profile
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQzYTIyMmUyNTVmOWVlOGIyMWJkNmUiLCJpYXQiOjE2ODIxNTQxNDB9.Nl2K37FL-k8dhWh-zM9nUkiv9BvdSDOTwmTIdobTXxQ
+
+###
+DELETE http://localhost:5000/api/users/profile
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQyZTJkNDljMWEwOTU3NzIxM2ZhY2YiLCJpYXQiOjE2ODIxNTIyNjd9.r2EEgI6LHLhPsrkLdajDspMSFKjoTlxfCbSXPOFNPK4
+
+###
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "password": "First"
+}
+
+###
+DELETE http://localhost:5000/api/users/6442ddfd98f25ad06c83153e
+
+
+###
+//Login
+GET http://localhost:5000/api/users/login
+
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "name": "Admin",
+    "password": "First"
+}
+###
+// User
+
+GET http://localhost:5000/api/fruits
+
+###
+
+POST http://localhost:5000/api/fruits
+Content-Type: application/json
+
+{
+    "firstName": "Kasun",
+    "lastName": "Kalahara",
+    "address": "No 367,janayaya city ,Rajagiriya",
+    "gender": "male",
+    "phoneNumber": "0711234567",
+    "dateOfBirth": "2000/05/17",
+    "nic": "123456789v",
+    "description": "I want help begin your Pharmacy"
+}
+
+###
+
+DELETE http://localhost:5000/api/fruits/643f7edac82956343c60538d
+
+###
+
+PUT http://localhost:5000/api/fruits/6434dc383a16dcb92da6d0c1
+Content-Type: application/json
+
+{
+   "firstName": "Hasan",
+    "lastName": "Anjana",
+    "address": "No 37,maharagama road,Maharagama",
+    "gender": "male",
+    "phoneNumber": "0711234567",
+    "dateOfBirth": "2000/05/17",
+    "nic": "123456789v",
+    "description": "Apple is a fruit"
+    
+}
+
+###
+POST http://localhost:5000/api/users/tokenIsValid
